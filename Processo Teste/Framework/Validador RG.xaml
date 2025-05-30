@@ -1,0 +1,219 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Validador_RG" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="boolValidadeRG" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="strRG" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Validador_RG_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Validador_RG" sap:VirtualizedContainerService.HintSize="1306,1643" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="572,1620" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="538,1373" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="5bcf0c76-8863-42ec-b7c7-189b97fecbde" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="504,1124" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="strRGSite" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'INPUT  txt_rg'" sap:VirtualizedContainerService.HintSize="470,187" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[strRG]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bf5562a0-736d-4620-8b5e-269df37d95ae" InformativeScreenshot="8d400ea3b4fffa55532f036afd40c947" Selector="&lt;webctrl id='txt_rg' tag='INPUT' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Validar RG'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5bcf0c76-8863-42ec-b7c7-189b97fecbde" Version="V4">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="4devs.com.br/validador_rg" CVScreenId="d4a32f95-550d-4702-bd9f-50813a21552c" ContentHash="y7SDz3pOUkWNMKOImUDMXQ" CvElementArea="1016, 463, 147, 58" CvTextArea="1048, 482, 81, 15" CvTextArgument="Validar RG" CvType="Button" DesignTimeRectangle="1019, 466, 141, 53" ElementType="Button" FullSelectorArgument="&lt;webctrl id='bt_validar_rg' tag='INPUT' /&gt;" Guid="1b05ddea-d754-46ce-81b4-146f6f124988" InformativeScreenshot="289d71a7052ecab16df70872d897e85f.png" Reference="FT4jACwX0EijUTF8KNAKxA/ww07JD3m7kiGnuJ14XfiWw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Validador de RG - 4Devs' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+                </uix:NClick.Target>
+                <uix:NClick.VerifyOptions>
+                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionOptions.Retry>
+                    <uix:VerifyExecutionOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionOptions.Timeout>
+                  </uix:VerifyExecutionOptions>
+                </uix:NClick.VerifyOptions>
+              </uix:NClick>
+              <uix:NGetText DisplayName="Get Text 'Resposta'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="470,189" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="5bcf0c76-8863-42ec-b7c7-189b97fecbde" TextString="[strRGSite]" Version="V4">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="4devs.com.br/validador_rg" CVScreenId="ab48fea4-8192-43cd-81ad-d99a9804fc34" ContentHash="7UmWjAnQJkuMdq0_rv1HFA" CvElementArea="733, 557, 712, 141" CvType="InputBox" DesignTimeRectangle="736, 560, 708, 138" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='texto_resposta' tag='TEXTAREA' type='' class='' aaname='Resposta:            ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="40393864-f3c2-4186-993d-1fd15e3ead5c" InformativeScreenshot="37f93a6d3298046398081f31b46b59f5.png" Reference="FT4jACwX0EijUTF8KNAKxA/hYKh8FOHeECyJwYx8R6c6g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Validador de RG - 4Devs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="ab48fea4-8192-43cd-81ad-d99a9804fc34" CvElementArea="733, 557, 712, 141" CvTextArea="735, 543, 64, 16" CvTextArgument="Resposta:" CvType="InputBox" DesignTimeRectangle="736, 539, 708, 159" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='area_resposta' tag='LABEL' type='' class='' aaname='Resposta:            ' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Resposta:' /&gt;" Guid="959ddaa3-4795-4136-9f67-5263bea1db02" SearchSteps="FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <If Condition="[strRGSite.Contains(&quot;Verdadeiro&quot;)]" sap:VirtualizedContainerService.HintSize="470,461" sap2010:WorkflowViewState.IdRef="If_1">
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[boolValidadeRG]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[boolValidadeRG]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" ContentHash="Dy9u-kBGv0yJz8Sg5_3DNw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAABYlAAAWJQFJUiTwAAAE40lEQVRYR6WWWYxURRSGbzQmhuiDG8QN3FBcMW5R44ryYGLigz7Kg0YYiYawGRGRRRQHkEEHjIpIUKKDQkQREFwmKsSgRMGIIlGizBgXCIlERQZxfv+vqq6zcLunp7uSk+66t26d//znP6cqO+MJqRY7M1n3Z53nJa1e7VUBwMHptlNmSCcn62/j3an+Pck2IK3tyaoCgOOz66Vr50g3Nkg3zZWuflI6y+/4vdnzy2ZHUD2xUTEANiIqIsQJDrKJtgdso+Lv8Y/790HbWNs06eJZkZ2SICpJQf4xtF40M0acTbZNkO5aII1fIs1eIc1YLg19SprwijT1NenWRq95NIIAdCkQZQHwER/z/wY7huJsjBkw9as/k/7YpzB2/y4tXCf1MQPNm+OzL76TDntMOsbPAFFKEyUBnGYj6itM9XV2SMTZw1LjKql1V3TC+PpHadrr0oVmh/djXpba2+O7eV6bjZOGGHypVBQCAO0F3nCoxQSN2WhpxIvSpu1xY8Yve6SGt/yOdNjJsY4UJ9l4afmGuGZ7q+fWQr/EAkF18VWkAcrrHCs8OL5fGmQgqz6V/m6Lmx48KK3caKU739lDtunSNWboPH8ThPmIdOdz0v4Dcf0U6wGBop0iFg4BwIITvRClP7tG2vFz3Iix5XtpUlN0gl3iqDDKEq0QJYCyKdLGbfGbdz/33Kxclcq0u78uAHBOfUPbWOdy3/64CePblrT5Pd7Mkd5iBtAIztkY5vgNWjAzjW/H71p+k/p6DYzmveF/n0UpyJVPNNOXSVt/iBsxADHLJRcEaQbQCA4BgnO0g2gR47DnpTan4cA/Up31wzfXO1UA7uyvUISBBaJ17o6zgBa9J+39M4L41wpf/5V0xzN+74YzyGtJVz9vjMiCDpwC9mhJ1RLEmqoBAJ11UAiAjRDVpeTU6YDS2+ZJH6QaZ+zZKy1pTu8nSZfbMd8O5hsEPDX2AkbTR54bLAx06QflOmFeMohsoH9z4U18taswv9kpjVrsd44awEQ5wFGShuYtcc07mzw3AwixxyrobiCGZoAc6c7GxlTJ4vc7Sm0tDtwrOJzI9RGsMys4ZsAc6UQfA70Xgg37V3oc8wGMIDgaVKDdjqh3aH7zE89NMRGv4D9sGQDAygKwVQQgN9hA7VQI5YSj/mlOzlt3R4d0TZrYhq1xvsbnRtUp6G6gB8i5jgQ2+kB3Et2y9TEtM9/wvK6jhJs+9Ly3IuzJcpFSLegDERLlyEVuUk/7v0H9lBiZU6oMawGAkY6QCjsb53vB3JX+T5PyReXuFzoa0YiFfuZSrrgRVWIwQAqOIgXWwsduToyl1PxwacHaON/5q5tZAllRK67UyGUQn6m/fb70Vzo3GmDhPmmzDy7GunKHUbUAcH6+o4dOos/rnQZFuQ1zeUI9Y/LS+KzwUlINgPzUG0w/cK5HvxQdMYLYfFrm9R9OUPeME8pcy6pigMspjYZ74i7fBxnclrJ7peEWXFuKfv5qP3P5DfGp2asrWSkjesoOQeF8m88BBmd+OIadjvza9uWOuC6/jhVFX7UG+npTAHBpIeJwd7QYr7TQ6jwf6U4YLrI+0tFKofNkVQFAAxxIdD/scJcinTHvCTw72iC5W+YNq9BqbUQc01w8OGA6P8PxISVXZLUCKBJVb60mADVbvdr/Axi/NpM16t0XAAAAAElFTkSuQmCC" InformativeScreenshot="7c02e6ec5d11cd1b82116cc1f4daf199.jpg" Reference="FT4jACwX0EijUTF8KNAKxA/F6vhzoBmRESRiEuNI8FCTA" Selector="&lt;html app='chrome.exe' title='Validador de RG - 4Devs' /&gt;" Url="https://www.4devs.com.br/validador_rg" Version="V2" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="538,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;O RG foi Verificado&quot;]" />
+    </Sequence>
+  </Sequence>
+</Activity>
