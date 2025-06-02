@@ -95,23 +95,45 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Finalização" sap:VirtualizedContainerService.HintSize="1306,666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Finalização" sap:VirtualizedContainerService.HintSize="1306,894" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="468,643" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="468,871" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="strTextoCompletar" />
+        <Variable x:TypeArguments="x:String" Name="strMarcaMais" />
+        <Variable x:TypeArguments="x:Int32" Name="intQuantidadeMarcaMais" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strMarcaMais]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[dictMarcas.Aggregate(function (l, r) if (l.value &gt; r.value, l, r)).Key]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[intQuantidadeMarcaMais]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[dictMarcas(strMarcaMais)]</InArgument>
+        </Assign.Value>
+      </Assign>
       <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[strTextoCompletar]</OutArgument>
@@ -120,7 +142,7 @@
           <InArgument x:TypeArguments="x:String" xml:space="preserve">O robo concluiu seu processamento com sucesso, a quantidade de Pedidos invalidos foi de : </InArgument>
         </Assign.Value>
       </Assign>
-      <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID0}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[strTextoCompletar + intQuantiTotal.ToString]" ConnectionId="a856437f-eae5-4da5-ab4a-5eece9af87d1" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,446" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Robo terminou de rodar" To="[New String(){&quot;gabriel.paiva.ms@hotmail.com&quot;}]" UseConnectionService="True" UseSharedMailbox="False">
+      <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID0}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[strTextoCompletar + intQuantiTotal.ToString + &#xD;&#xA;&quot;&lt;br&gt;Masculinos validos: &quot; + intQuantiMascVali.ToString + &#xD;&#xA;&quot;&lt;br&gt;Masculinos invalidos: &quot; + intQuantiMascInvali.ToString + &#xD;&#xA;&quot;&lt;br&gt;Femininos validos: &quot; + intQuantiFemVali.ToString + &#xD;&#xA;&quot;&lt;br&gt;Femininos invalidos: &quot; + intQuantiFemInvali.ToString + &#xD;&#xA;&quot;&lt;br&gt;Marca mais comprada: &quot; + strMarcaMais]" ConnectionId="a856437f-eae5-4da5-ab4a-5eece9af87d1" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,446" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Robo terminou de rodar" To="[New String(){&quot;gabriel.paiva.ms@hotmail.com&quot;}]" UseConnectionService="True" UseSharedMailbox="False">
         <umam:SendMailConnections.AttachmentList>
           <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
             <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath("C:\\Users\\Aluno\\Desktop\\Tabela Processado.xlsx")]</InArgument>
