@@ -179,7 +179,7 @@
                   <InArgument x:TypeArguments="x:String">[strRenavanSite.split(" "c)(2)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[strRenavanSite = &quot;verdadeiro&quot;]" sap:VirtualizedContainerService.HintSize="470,461" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[strRenavanSite = &quot;Verdadeiro&quot;]" sap:VirtualizedContainerService.HintSize="470,461" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
                   <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>

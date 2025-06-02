@@ -101,7 +101,6 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="s:Char[]" Name="arrAllChar" />
       <Variable x:TypeArguments="x:Int32" Name="intCount" />
-      <Variable x:TypeArguments="x:Boolean" Name="boolValidade" />
       <Variable x:TypeArguments="x:String" Name="strFinDigits" />
       <Variable x:TypeArguments="x:String" Name="strVerFinDigits" />
       <Variable x:TypeArguments="x:Int32" Name="intSoma1" />

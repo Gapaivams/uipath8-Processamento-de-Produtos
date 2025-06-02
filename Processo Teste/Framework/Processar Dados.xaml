@@ -130,13 +130,13 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Processar_Dados" sap:VirtualizedContainerService.HintSize="1306,2801" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Processar_Dados" sap:VirtualizedContainerService.HintSize="1306,3865" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="640,2778" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="640,3842" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="strNome" />
         <Variable x:TypeArguments="x:String" Name="strSexo" />
@@ -257,17 +257,16 @@
           <OutArgument x:TypeArguments="x:Boolean" x:Key="boolValidadeRena">[boolValidadeRena]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="606,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;tblInfoValida is Nothing: &quot; &amp; (GlobalVariablesNamespace.GlobalVariables.tblInfoValida Is Nothing).ToString]" />
-      <ui:BuildDataTable DataTable="[tblInfoValiItem]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="606,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Nome&quot; msdata:Caption=&quot;&quot; default=&quot;strNome&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Sexo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; default=&quot;strSexo&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;CPF&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; default=&quot;strCPF&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;RG&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; default=&quot;strRG&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Veiculos&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; default=&quot;strVeiculos&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Placa&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; default=&quot;strPlaca&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Renavan&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; default=&quot;strRenavan&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;Nome&gt;strNome&lt;/Nome&gt;&#xD;&#xA;    &lt;Sexo&gt;strSexo&lt;/Sexo&gt;&#xD;&#xA;    &lt;CPF&gt;strCPF&lt;/CPF&gt;&#xD;&#xA;    &lt;RG&gt;strRG&lt;/RG&gt;&#xD;&#xA;    &lt;Veiculos&gt;strVeiculos&lt;/Veiculos&gt;&#xD;&#xA;    &lt;Placa&gt;strPlaca&lt;/Placa&gt;&#xD;&#xA;    &lt;Renavan&gt;strRenavan&lt;/Renavan&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-      <ui:MergeDataTable Destination="[tblInfoValida]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="606,165" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[tblInfoValiItem]" />
-      <If Condition="[boolValidade = True and boolValidadeRena = True and boolValidadeRG = True]" sap:VirtualizedContainerService.HintSize="606,1058" sap2010:WorkflowViewState.IdRef="If_2">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="606,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[boolValidade &amp; boolValidadeRena &amp; boolValidadeRG]" />
+      <If Condition="[boolValidade = True and boolValidadeRena = True and boolValidadeRG = True]" sap:VirtualizedContainerService.HintSize="606,2216" sap2010:WorkflowViewState.IdRef="If_2">
         <If.Then>
-          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="604,764" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="604,982" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strNome,strSexo,strCPF,strRG,strVeiculos,strPlaca,strRenavan}]" DataTable="[tblInfoValida]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="570,218" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
             <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="570,704" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
               <ueab:ExcelProcessScopeX.Body>
                 <ActivityAction x:TypeArguments="ui:IExcelProcess">
@@ -304,23 +303,65 @@
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="604,165" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="604,1096" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="570,105" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign sap:VirtualizedContainerService.HintSize="570,114" sap2010:WorkflowViewState.IdRef="Assign_6">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[GlobalVariablesNamespace.GlobalVariables.intQuantiTotal]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:Int32">[GlobalVariablesNamespace.GlobalVariables.intQuantiTotal - 1]</InArgument>
+                <InArgument x:TypeArguments="x:Int32">[GlobalVariablesNamespace.GlobalVariables.intQuantiTotal + 1]</InArgument>
               </Assign.Value>
             </Assign>
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strNome,strSexo,strCPF,strRG,strVeiculos,strPlaca,strRenavan,boolValidade.ToString,boolValidadeRG.ToString,boolValidadeRena.ToString}]" DataTable="[tblInfoInvalida]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="570,218" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="570,704" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="536,594" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="502,534" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="C:\Users\Aluno\Desktop\Tabela invalidos.xlsx">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="468,242" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Plan1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,182" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[tblInfoInvalida]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+            </ueab:ExcelProcessScopeX>
           </Sequence>
         </If.Else>
       </If>
+      <ui:SetTransactionStatus ContinueOnError="{x:Null}" FolderPath="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" sap:VirtualizedContainerService.HintSize="606,163" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_1" Status="Successful" TransactionItem="[queDadosCliente]">
+        <ui:SetTransactionStatus.Analytics>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+        </ui:SetTransactionStatus.Analytics>
+        <ui:SetTransactionStatus.Output>
+          <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+        </ui:SetTransactionStatus.Output>
+      </ui:SetTransactionStatus>
     </Sequence>
   </Sequence>
 </Activity>

@@ -124,6 +124,7 @@
         <umam:SendMailConnections.AttachmentList>
           <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
             <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath("C:\\Users\\Aluno\\Desktop\\Tabela Processado.xlsx")]</InArgument>
+            <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath("C:\\Users\\Aluno\\Desktop\\Tabela invalidos.xlsx")]</InArgument>
           </scg:List>
         </umam:SendMailConnections.AttachmentList>
         <umam:SendMailConnections.AttachmentsBackup>
